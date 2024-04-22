@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Sun4Heat</title>
+
+    {{ bokeh_css }}
+    {{ bokeh_js }}
+    <style media="screen">
+      {% include 'main.css' %}
+    </style>
+
+  </head>
+
+  <body>
+
+
+
+      <!-- Titulo y menu -->
+    <!--  <section id="inicio" class="cs_sistemaInfo">
+      <div class="jumbotron">
+
+        <div class="container">
+          <div class="row">
+
+              <div class="col-md-5">
+                <h2 class="cs_titulo">Sun4Heat</h2>
+              </div>
+
+              <div class="col-md-2">
+
+              </div>
+
+              <div class="col-md-5">
+
+               <!-- <p class="sist_descripcion">
+                Sun4Heat es una herramienta que nos permite visualizar distintos
+                elementos importantes claves para la evaluación de proyectos
+                solares.-->
+
+                  </p>
+
+              </div>
+
+          </div>
+        </div>
+
+
+      </div>
+    </section>
+
+    <!-- SECCION QUE CONTIENE EL MAPA -->
+    <section id="mapavis" class="container">
+        <!-- Visualizaciones -->
+        <div class="row">
+          <div class="col-md-12">
+            <h3 class="titulo_seccion">
+              <!-- svg class="linea_izq" height="10" width="120"-->
+                <line x1="0" y1="5" x2="120" y2="5" style="stroke:#20206D;stroke-width:3" />
+              </svg>Mapa</h3>
+          </div>
+            <div class="col-md-12">
+              {{ plot_div|indent(8) }}
+            </div>
+          </div>
+        </div>
+      </section>
+  </div>
+
+
+    <!--  Ups! celular en vertical  -->
+   <!-- <div class="cel_vertical oculto">
+      <img src="mapa_dev/static/svg/celu.svg" alt="Tu smartphone está en posición vertical">
+      <h5>Para acceder a las visualizaciones pon en posición horizontal tu smartphone</h5>
+      <button id="vertical_ocultar" type="button" class="btn btn-outline-light">Volver</button>
+    </div> -->
+
+   <!-- Optional JavaScript -->
+   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  {{ plot_script|indent(8) }}
+
+
+  </body>
+</html>
